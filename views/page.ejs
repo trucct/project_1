@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UDA-NetWork</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</head>
+<style>
+.buttonn{
+  margin-left: 22%;
+  margin-top: 20px;
+}
+
+
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <a style="color: green; font-size: 25px; font-weight: bold;" class ="navbar-brand" href="#">ĐÔNG Á</a>
+    <form class="form-inline my-2 my-lg-0">
+      <input style="width: 900px;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  <div class="menu">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/profile">Trang chủ <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/trieu">Góc sinh viên</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Trang cá nhân
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Thông tin</a>
+          <a class="dropdown-item" href="#">Cài đặt</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Đăng xuất</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Chat</a>
+      </li>
+    </ul>
+  </div>
+  
+</nav>
+</body>
+</html>
+
+</style>
+</body>
+
+</form>
+  
+
+  </div>
+  <div class="container">
+    <h1 style="margin:0 auto; font-size: 20px;margin-left: 45%;">Trang Cá Nhân</h1>
+    <hr>
+  </div>
+  
+  <div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-4" style="margin-left: 120px;"><div class="text-center">
+        <img src="https://image.thanhnien.vn/1200x630/Uploaded/2021/unvjxbf/2021_11_10/1-meo-shutterstock-4700.jpg"  style=" height: 300px;width: 300px;border-radius: 50%;" class="avatar img-circle" alt="avatar">
+        <h2 style="margin-left: 20px;font-size: 20px;margin-top: 10px;">Giới thiệu</h2>
+        <h3> <%=element.hovaten  %> </h3>
+         
+        <h5>Mã sinh Viên: <%=element.masv %> </h5><br>
+        
+        <h5>Tuổi: <%=element.tuoi  %> </h5><br>
+        <h5>Lớp: <%=element.lop %> </h5><br>
+        <h5>Email:<%=element.email %> </h5><br>
+        <h5>Địa chỉ: <%=element.diachi %>  </h5><h6> 
+        <a href="/trieu/edit/<%=element._id %>">
+      
+          <button style="width: 100px;border-color: black;" type="button" class="btn btn-outline-primary">Sửa</button>
+        </a>
+        </div>
+        <a href="/trieu/add">
+          <button style="width: 100px; margin-left: 40.6%;margin-top: 10px;border-color: black;" type="button" class="btn btn-outline-primary">Thêm</button>
+        </a>
+        </div>
+        
+      <div class="col-sm-7">
+        <div class="stt" style="height: 800px;width: 700px; background-color: rgb(236, 233, 228);border-radius: 50px;">
+          <form action="/post" method="POST"  >
+            <img src="https://image.thanhnien.vn/1200x630/Uploaded/2021/unvjxbf/2021_11_10/1-meo-shutterstock-4700.jpg"  style=" height: 50px;width: 50px;border-radius: 50%;margin-left: 40px;" "  class="avatar img-circle" alt="avatar">
+            <input title="" placeholder="   Bạn đang nghĩ gì?" class= " upstt" style="height: 40px;width: 70%;background-color: white;margin:auto;  border-radius: 020px;margin-top: 30px;"" name="content">
+         
+            <input type="submit" />
+            </form>
+            <% data.forEach(element => { %>
+      <div class="ggstt" style="height: 170px; width: 90%; margin: auto; background-color: white; margin-top: 20px;border-radius: 30px;">
+        <img src="https://image.thanhnien.vn/1200x630/Uploaded/2021/unvjxbf/2021_11_10/1-meo-shutterstock-4700.jpg"  style=" height: 70px;width: 70px;border-radius: 50%;margin-left: 40px;margin-top: 10px;" "  class="avatar img-circle" alt="avatar">
+        
+        <h2 style="margin-top: -80px; font-size: 10px;margin-left: 300px;"> <%=element.updatedAt %></h2>
+          <h6 style="margin:auto;margin-left: 30px; margin-top: 80px;"  ><%=element.content %> </h6>
+
+       
+      
+      </div> <% }) %>
+      </div>
+
+     
+    </div>
+  </div>
+
+  
+  
+            
+   
+  
+        
+            
+           
+             
+             
+        
+     
+        
+        
+       
+        
+
+  
+    
+      </div>  
+                
+          
+      
+                
+      
+      
+          
+      
+      
+      
+       
+       
+
+
+
+  </div>
+
+
+</div>
+
+    <!-- left column -->
+    
+
+</body>
+
+</html>
